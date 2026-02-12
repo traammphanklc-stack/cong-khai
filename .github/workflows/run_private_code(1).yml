@@ -167,7 +167,8 @@ jobs:
           # faster Whisper
           python -m pip install faster-whisper
           # Kiểm tra import (dùng python -c để tránh lỗi YAML here-doc)
-          python -c "import sys; import whisper, torch, torchaudio; print('Whisper/Torch OK:', whisper.__version__, torch.__version__)"
+          python -c "from faster_whisper import WhisperModel; import torch; print('Faster-Whisper OK:', torch.__version__)"
+
 
       - name: Install Python deps
         run: |
