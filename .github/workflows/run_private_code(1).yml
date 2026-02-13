@@ -166,6 +166,8 @@ jobs:
           python -m pip install "torch==2.3.1" "torchaudio==2.3.1" --index-url https://download.pytorch.org/whl/cpu
           # faster Whisper
           python -m pip install faster-whisper
+          # openai-whisper (để có whisper.utils.get_writer)
++         python -m pip install openai-whisper
           # Kiểm tra import (dùng python -c để tránh lỗi YAML here-doc)
           python -c "from faster_whisper import WhisperModel; import torch; print('Faster-Whisper OK:', torch.__version__)"
 
