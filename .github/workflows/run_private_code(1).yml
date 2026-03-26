@@ -2,9 +2,8 @@ name: run-private-code
 
 on:
   schedule:
-    - cron: '0 22 * * *'   # 11:00 VN
-    - cron: '0 4 * * *'   # 13:00 VN
-    - cron: '0 10 * * *'   # 16:00 VN
+    - cron: '0 23 * * *'   # 11:00 VN
+    - cron: '0 8 * * *'   # 13:00 VN
 
   workflow_dispatch: {}
 
@@ -29,7 +28,7 @@ jobs:
       CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
       CF_API_TOKEN:  ${{ secrets.CF_API_TOKEN }}
       CF_MODEL: "@cf/black-forest-labs/flux-1-schnell"
-      CF_STEPS: "8"
+      CF_STEPS: "4"
 
 
     steps:
